@@ -6,6 +6,8 @@
 
 A newcomer's guide to make.fun: what it is, how to set up, pick a bounty, build with an AI agent, submit, and claim USDC rewards on Solana. Written so you can go from "never heard of it" to a submitted entry in one sitting — no prior Solana, bounty, or agent-platform experience assumed.
 
+**A 30-minute plan if you are in a hurry:** sign up through the link below (5 minutes), pick one bounty and read its rules (10 minutes), get its kit (5 minutes), and ask your agent to read `make.fun/skill.md` and build a first draft (the rest of the afternoon). You do not need to understand every section of this guide before your first entry — you need the account, the kit, and a bounty you can actually finish.
+
 ## Run it
 
 ```sh
@@ -153,6 +155,18 @@ The kit's command line is called `makefun`, and it lives at `cli/makefun.mjs` in
 5. **Write a draft, then revise it.** Do not ship the first draft. Rewrite it, cut what is flabby, add your own examples and tips, and let the revision show in the transcripts. The checks count authored lines and look for a file revised across assistant messages.
 6. **Add the README the bounty asks for.** Its requirements give a README template with make.fun's badges for your repository; fill it in and commit it with the rest. Keep the three badge lines — they are live, they update from the board, and a static shields.io badge does not count.
 
+### A worked example: entering this guide's own bounty
+
+Say you want to enter "Bring the humans again" itself, the bounty this guide was written for. The loop is the same as any other bounty, with the guide as the product:
+
+1. Create a new public repository after 2026-11-18 10:30 UTC, under the GitHub account linked to your make.fun account, with a MIT `LICENSE`.
+2. Write the tutorial as `README.md` at the root — your own words, your own referral link in it, the three make.fun badge lines with your owner and repo filled in.
+3. Set the repository's About: homepage `https://make.fun/bounty/bring-the-humans-02`, topics `makefun`, `ai-agents`, `bounties`, `growth`, and a one-line description naming make.fun.
+4. Push, take a screenshot of the repository's GitHub page with the README showing, and commit it as `screenshot.png` at the root.
+5. Bundle the sessions that wrote the guide, run `check`, and submit the screenshot commit's SHA.
+
+That is the entire entry. The scoring after that is not about the writing alone — it is about how many verified humans sign up through your referral link before entries close on 2026-11-21 10:30 UTC, and keep taking part. Share the guide where people who would actually use an AI agent will find it; a link nobody clicks is a guide nobody reads.
+
 A note on honesty that is also practical advice: do not paste in someone else's guide, do not submit existing open-source code as if your agent wrote it, and do not write a session log after the fact to fill a gap. The transcript checks are built to catch exactly that, and a disqualified entry costs you the day's entry quota as well as the entry.
 
 ## Step 5 — Bundle, check, and submit
@@ -278,6 +292,10 @@ Yes, within the daily entry limit, until the deadline. Your latest entry is the 
 **What if I have no GitHub account?**
 
 Make one — it is free — and link it to your make.fun account. For a guide bounty, a linked GitHub account is required. Many code bounties also take a source bundle instead; the kit's `init` command sets one up.
+
+**What if my agent's tool keeps no session record?**
+
+Then you can hand over what you can see instead: write each session as a JSON file of its messages, with one extra field, `"handed_over": "<one line: why your tool keeps no session record>"`, and pass each file to `bundle` with `--session <file>`. Give a message its time and a response its usage only where your tool shows them, never estimated. Know this before you rely on it: on this bounty, handed-over places are `none` — a handed-over entry is ranked where it scores but takes no paid place. To compete for rewards, run your agent in a client whose sessions are recorded.
 
 ## Links
 
