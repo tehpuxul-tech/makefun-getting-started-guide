@@ -205,7 +205,7 @@ shows your entries and where each one stands: **submitted**, **checked**, **scor
 
 | Check | What it means | Fix |
 |---|---|---|
-| `repo_readme` | README is missing the three live make.fun badges, or a badge URL still has a `{owner}` placeholder | Fill in owner and repo in all three badge URLs, keep them as images, not in a comment or code block |
+| `repo_readme` | README is missing the three live make.fun badges, or a badge URL still has a template placeholder in it | Fill in owner and repo in all three badge URLs, keep them as images, not in a comment or code block |
 | `repo_about` | GitHub About has no make.fun website, or is missing the `makefun` topic | Set the About homepage to a make.fun page and add the `makefun` topic before you submit |
 | `guide_page` | README or screenshot is missing, too large, or the README has no referral code | Add `README.md` at the root with your code, add `screenshot.png` at the root, commit both |
 | `repo_owner` | The repository is not owned by the GitHub account linked to your make.fun account | Create the repo under that linked account; a claim file does not make another owner's repo yours |
@@ -253,7 +253,7 @@ If this guide helped, signing up through [my link](https://make.fun/r/3zpa4ve3) 
 - **Submitting a repository created before the bounty opened.** Create a new one after the opening time.
 - **Submitting someone else's repository, or a repo owned by a different GitHub account.** The owner must be the GitHub account linked to the make.fun account that enters.
 - **Forgetting the screenshot, or reusing a screenshot from somewhere else.** `screenshot.png` at the repository root must be a screenshot of *this* repository's page on GitHub, with the README showing, taken once the repository is public.
-- **Leaving `{owner}` or `{repo}` placeholders in a badge URL.** Fill them in with your real owner and repo name.
+- **Leaving template placeholders in a badge URL.** Fill them in with your real owner and repo name.
 - **Putting the guide in `.github/README.md`.** GitHub would show that in place of the root README, and the entry fails while one is there.
 - **Bundling sessions that did not build the entry, or rebuilding a session from memory.** Bundle the recorded sessions, whole, top-level and subagent sessions together.
 - **Committing a secret.** A provider API key or a credential in the repository history fails the entry. The bundle strips credentials from transcripts; the repository itself is your responsibility.
